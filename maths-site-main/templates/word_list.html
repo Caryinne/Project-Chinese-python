@@ -1,0 +1,37 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Список слов
+{% endblock %}
+
+{% block page-lead %}
+Все слова извлекаются из БД/файла и динамически вставляются в таблицу.
+{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5" id="words-table">
+    <h2 class="mb-4 text-center">Список слов</h2>
+    <div class="table-responsive shadow-sm">
+        <table class="table table-striped table-hover table-bordered table-sm">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col" class="py-3">#</th>
+                    <th scope="col" class="py-3">Слово</th>
+                    <th scope="col" class="py-3">Транскрипция</th>
+                    <th scope="col" class="py-3">Перевод</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cnt, word, transcription, translation in words %}
+                <tr>
+                    <td class="py-3">{{ cnt }}</td>
+                    <td class="py-3">{{ word }}</td>
+                    <td class="py-3">{{ transcription }}</td>
+                    <td class="py-3">{{ translation }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

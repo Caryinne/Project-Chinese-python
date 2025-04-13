@@ -1,0 +1,39 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Список иероглифов
+{% endblock %}
+
+{% block page-lead %}
+Все иероглифы извлекаются из БД/файла и динамически вставляются в таблицу.
+{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5" id="words-table">
+    <h2 class="mb-4 text-center">Список иероглифов</h2>
+    <div class="table-responsive shadow-sm">
+        <table class="table table-striped table-hover table-bordered table-sm">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col" class="py-3">#</th>
+                    <th scope="col" class="py-3">Символ</th>
+                    <th scope="col" class="py-3">Транскрипция</th>
+                    <th scope="col" class="py-3">Тон</th>
+                    <th scope="col" class="py-3">Перевод</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cnt, word, transcription, tone, translation in characters %}
+                <tr>
+                    <td class="py-3">{{ cnt }}</td>
+                    <td class="py-3">{{ word }}</td>
+                    <td class="py-3">{{ transcription }}</td>
+                    <td class="py-3">{{ tone }}</td>
+                    <td class="py-3">{{ translation }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

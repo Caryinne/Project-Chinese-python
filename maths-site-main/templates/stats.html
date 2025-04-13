@@ -1,0 +1,84 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Статистика по словам и иероглифам
+{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5" id="stats">
+    <h2 class="text-center mb-4">Статистика по словам и иероглифам</h2>
+    
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0">Количество слов</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h3>{{ words_all }}</h3>
+                    <p class="text-muted">всего</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0">Изначально в базе</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h3>{{ words_own }}</h3>
+                    <p class="text-muted">изначально бывших в базе</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0">Добавленные слова</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h3>{{ words_added }}</h3>
+                    <p class="text-muted">добавленных через <a href="/add-word" class="text-decoration-none">форму добавления слов</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <div class="row mb-5">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0">Количество иероглифов</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h3>{{ characters_all }}</h3>
+                    <p class="text-muted">всего</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0">Изначально в базе</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h3>{{ characters_own }}</h3>
+                    <p class="text-muted">изначально бывших в базе</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0">Добавленные иероглифы</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h3>{{ characters_added }}</h3>
+                    <p class="text-muted">добавленных через <a href="/add-word" class="text-decoration-none">форму добавления иероглифов</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+{% if success %}
+Иероглиф добавлен
+{% else %}
+Ошибка добавления
+{% endif %}
+{% endblock %}
+
+{% block page-lead %}{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5" id="word-form-result">
+    <h2 class="pb-2 border-bottom text-center">Результат запроса</h2>
+    <p class="lead text-center">Уважаемый пользователь <span class="fst-italic">{{ user }}</span>,<br/>
+        Ваш запрос завершился <span class="fw-bold">{% if success %}успешно{% else %}ошибкой{% endif %}</span>.
+    </p>
+
+    <div class="mt-4">
+        <h3 class="pb-2 border-bottom">Комментарий</h3>
+        <p class="text-muted">{{ comment }}</p>
+    </div>
+
+    <div class="mt-4">
+        <h3 class="pb-2 border-bottom">Что можно сделать?</h3>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="/add-word" class="text-decoration-none">заполнить форму ещё раз</a></li>
+            <li class="list-group-item"><a href="/" class="text-decoration-none">вернуться на главную</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

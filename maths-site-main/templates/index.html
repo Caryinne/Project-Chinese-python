@@ -1,0 +1,72 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Лексика китайского языка
+{% endblock %}
+
+{% block page-lead %}
+Это страничка проекта про изучение китайского языка. <br/>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4">Что есть в этом проекте</h2>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-header bg-primary text-white">
+                    <h3>Список слов</h3>
+                </div>
+                <div class="card-body">
+                    <p>Просмотрите список слов, которые мы собрали.</p>
+                    <a href="/words-list" class="btn btn-outline-primary">Перейти к словам</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-header bg-primary text-white">
+                    <h3>Список иероглифов</h3>
+                </div>
+                <div class="card-body">
+                    <p>Просмотрите список иероглифов, которые мы собрали.</p>
+                    <a href="/characters-list" class="btn btn-outline-primary">Перейти к иероглифам</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-header bg-success text-white">
+                    <h3>Добавить слово</h3>
+                </div>
+                <div class="card-body">
+                    <p>Заполните форму, чтобы добавить новое слово.</p>
+                    <a href="/add-word" class="btn btn-outline-success">Добавить слово</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-header bg-success text-white">
+                    <h3>Добавить иероглиф</h3>
+                </div>
+                <div class="card-body">
+                    <p>Заполните форму, чтобы добавить новый иероглиф.</p>
+                    <a href="/add-character" class="btn btn-outline-success">Добавить иероглиф</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-header bg-info text-white">
+                    <h3>Статистика</h3>
+                </div>
+                <div class="card-body">
+                    <p>Посмотрите статистику по добавленным словам и иероглифам.</p>
+                    <a href="/stats" class="btn btn-outline-info">Посмотреть статистику</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+{% endblock %}
